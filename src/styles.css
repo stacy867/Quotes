@@ -7,6 +7,7 @@ body {
     background-image:
 } */
     
+    @import "~bootstrap/dist/css/bootstrap.css";
     textarea {
         border: 1px solid;
         width: 40%;
