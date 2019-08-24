@@ -6,12 +6,9 @@
     <p>{{q.quote}}</p>
     <p>Quote Detail</p>
     <app-diplay-quote [qu]='q'></app-diplay-quote>
-
-    <!-- </li>
-        <li>{{q.author}}
-        </li>
-        <li>{{q.person}}</li> -->
+    <app-diplay-quote *ngIf [qu]='q' (isComplete)='deleteQuote($event,i)'></app-diplay-quote>
     <button (click)=' like(i) '>LIKE</button>
     <button (click)='dislike(i) '>DISLIKE</button>
-    <button (click)='details(i) '>Quote Details</button>
+    <button (click)='deleteQuote($event,i)'>Delete Quote</button>
+
 </div>
