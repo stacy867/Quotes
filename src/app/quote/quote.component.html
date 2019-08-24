@@ -1,12 +1,17 @@
 <div class="col-md-6">
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 </div>
-<ul *ngFor='let q of quotes' let i=index>
-    <li>{{q.quote}}
-    </li>
-    <li>{{q.author}}
-    </li>
-    <li>{{q.person}}</li>
+<div *ngFor='let q of quotes let i=index'>
+    <p>Quote:</p>
+    <p>{{q.quote}}</p>
+    <p>Quote Detail</p>
+    <app-diplay-quote [qu]='q'></app-diplay-quote>
 
-</ul><button>LIKE</button>
-<button>DISLIKE</button>
+    <!-- </li>
+        <li>{{q.author}}
+        </li>
+        <li>{{q.person}}</li> -->
+    <button (click)=' like(i) '>LIKE</button>
+    <button (click)='dislike(i) '>DISLIKE</button>
+    <button (click)='details(i) '>Quote Details</button>
+</div>

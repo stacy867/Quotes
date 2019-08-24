@@ -6,24 +6,21 @@ import { quote } from "../quote";
   styleUrls: ["./quote.component.css"]
 })
 export class QuoteComponent implements OnInit {
-  quotes: quote[]=[
-    // {
-    //   author: "rhth",
-    //   quote: " ehtsd",
-    //   person: "hrhtyht"
-    // },
-    // {
-    //   author: "rhth",
-    //   quote: " ehtsd",
-    //   person: "hrhtyht"
-    // }
-  ];
+  quotes: quote[] = [];
   addNewQuote(quote) {
-    let quoteLength = this.quotes.length;
-     quote.id = quoteLength + 1;
+    // let quoteLength = this.quotes.length;
+    // quote.id = quoteLength + 1;
     this.quotes.push(quote);
     console.log(this.quotes);
+
+   
   }
+  details(index) {
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+  // like(index) {
+  //   this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  // }
 
   constructor() {}
 
