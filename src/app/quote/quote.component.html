@@ -5,10 +5,14 @@
     <p>Quote:</p>
     <p>{{q.quote}}</p>
     <p>Quote Detail</p>
+    <p>This quote has{{likes}} upvotes</p>
+    <p>This quote has {{dislike}} downvotes</p>
+
     <app-diplay-quote [qu]='q'></app-diplay-quote>
     <app-diplay-quote *ngIf [qu]='q' (isComplete)='deleteQuote($event,i)'></app-diplay-quote>
-    <button (click)=' like(i) '>LIKE</button>
-    <button (click)='dislike(i) '>DISLIKE</button>
-    <button (click)='deleteQuote($event,i)'>Delete Quote</button>
+    <button (click)=' likeQuote() '>LIKE</button>
+    <button (click)='dislikeQuote() '>DISLIKE</button>
+    <button (click)='deleteQuote($event,i)'>Delete Quote</button> -->
+
 
 </div>

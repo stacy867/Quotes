@@ -23,6 +23,15 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+  likes = 0;
+  dislike = 0;
+
+  likeQuote() {
+    this.likes++;
+  }
+  dislikeQuote() {
+    this.dislike++;
+  }
   // details(index) {
   //   this.quotes[index].showDescription = !this.quotes[index].showDescription;
   // }
