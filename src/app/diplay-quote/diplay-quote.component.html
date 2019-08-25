@@ -9,6 +9,7 @@
 <p>{{qu.person}}</p>
 <p>This quote has{{likes}} upvotes</p>
 <p>This quote has {{dislike}} downvotes</p>
+<p>This quote was created before {{qu.completeDate|timeCount}} days</p>
 
-<button (click)=' likeQuote() '>LIKE</button>
-<button (click)='dislikeQuote() '>DISLIKE</button>
+<button (click)=' likeQuote(i) '>LIKE</button>
+<button (click)='dislikeQuote(i) '>DISLIKE</button>

@@ -6,7 +6,8 @@ export class quote {
   constructor(
     public author: string,
     public citation: string,
-    public person: string
+    public person: string,
+    public completeDate: Date
   ) {
     this.showDescription = false;
     this.upvotes = 0;
