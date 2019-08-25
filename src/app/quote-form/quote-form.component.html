@@ -6,11 +6,11 @@
     <hr>
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div class="form-group">
-            <label for="name">Authors Name</label><br><br> <input type="text" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required class="form-control" id="name">
+            <label for="name">Authors Name</label><br><br> <input type="text" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required class="form-control">
         </div>
         <div class="form-group">
             <label>Quote</label><br>
-            <textarea class="form-control" id="description" rows="15" width="134" [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel' required></textarea>
+            <textarea class="form-control" id="description" rows="15" width="134" [(ngModel)]="newQuote.citation" name="citation" #quote='ngModel' required></textarea>
         </div>
         <div class="form-group">
             <label>person to submit</label><br>

@@ -1,22 +1,20 @@
-<div class="container">
+<div class="container" id="quote">
     <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-6">
             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
-        <div class="col-md-5" id="display">
-            <div *ngFor='let q of quotes let i=index'>
+        <div class="col-md-6" id="display">
+            <div *ngFor='let qu of quotes let i=index'>
                 <p>Quote:</p>
-                <p>{{q.quote}}</p>
-                <p>Quote Detail</p>
-                <p>This quote has{{likes}} upvotes</p>
-                <p>This quote has {{dislike}} downvotes</p>
+                <p>{{qu.citation}}</p>
+                <p>Quote Detail:</p>
 
-                <app-diplay-quote [qu]='q'></app-diplay-quote>
-                <app-diplay-quote *ngIf [qu]='q' (isComplete)='deleteQuote($event,i)'></app-diplay-quote>
-                <button (click)=' likeQuote() '>LIKE</button>
-                <button (click)='dislikeQuote() '>DISLIKE</button>
+
+
+                <app-diplay-quote [qu]='qu'></app-diplay-quote>
+
+
                 <button (click)='deleteQuote($event,i)'>Delete Quote</button>
-
             </div>
         </div>
     </div>

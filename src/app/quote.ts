@@ -1,11 +1,15 @@
 export class quote {
   showDescription: boolean;
-//   author: string;
-//   quote: string;
-//   person: string;
 
-    constructor(public author: string, public quote: string, public person: string) {
-        this.showDescription = false;
+  public upvote: number;
+  public downvote: number;
+  constructor(
+    public author: string,
+    public citation: string,
+    public person: string
+  ) {
+    this.showDescription = false;
+    this.upvote = 0;
+    this.downvote = 0;
+  }
 }
-}
-

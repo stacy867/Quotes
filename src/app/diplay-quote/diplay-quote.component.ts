@@ -6,17 +6,34 @@ import { quote } from "../quote";
   styleUrls: ["./diplay-quote.component.css"]
 })
 export class DiplayQuoteComponent implements OnInit {
- 
+  @Input() qu: quote;
   @Output() isComplete = new EventEmitter<boolean>();
- 
+  quotes: quote[] = [];
+
   quoteDelete(complete: boolean) {
     this.isComplete.emit(complete);
   }
-  @Input() qu: quote;
+  likes = 0;
+  dislike = 0;
+  counter = 0;
 
-  
-
-
+  likeQuote(index) {
+    this.quotes[index].upvote++;
+  }
+  dislikeQuote(index) {
+    this.quotes[index].downvote++;
+  }
+  highestLike() {
+    this.likes = 0;
+    this.dislike = 0;
+    for (this.counter = 0; this.counter < this.quotes.length; this.counter++) {
+      this.dislike = this.quotes[this.counter].upvote;
+      if (this.dislike > this.likes) {
+        this.likes = this.dislike;
+      }
+    }
+    return this.likes;
+  }
   constructor() {}
 
   ngOnInit() {}

@@ -7,19 +7,15 @@ import { quote } from "../quote";
   styleUrls: ["./quote-form.component.css"]
 })
 export class QuoteFormComponent implements OnInit {
-  // newQuote = new quote("","");
-  // @Output() addQuote= new EventEmitter<quote>();
-  // submitQuote(){
-  //   this.addQuote.emit(this.newQuote);
-  //   this.newQuote= new quote(""," ");
-  newQuote = new quote( "", "","");
+  newQuote = new quote("", "", "");
+
   @Output() addQuote = new EventEmitter<quote>();
 
   submitQuote() {
     this.addQuote.emit(this.newQuote);
-    this.newQuote = new quote("", " "," ");
+    console.log(this.newQuote);
+    this.newQuote = new quote("", "", "");
   }
-  
 
   constructor() {}
 

@@ -15,21 +15,13 @@ export class QuoteComponent implements OnInit {
   deleteQuote(isComplete, index) {
     if (isComplete) {
       let toDelete = confirm(
-        `Are you sure you want to delete this ${this.quotes[index].quote}?`
+        `Are you sure you want to delete this ${this.quotes[index].citation}?`
       );
+
       if (toDelete) {
         this.quotes.splice(index, 1);
       }
     }
-  }
-  likes = 0;
-  dislike = 0;
-
-  likeQuote() {
-    this.likes++;
-  }
-  dislikeQuote() {
-    this.dislike++;
   }
 
   constructor() {}
