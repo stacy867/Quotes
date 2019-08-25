@@ -18,7 +18,7 @@ export class DiplayQuoteComponent implements OnInit {
   counter = 0;
 
   likeQuote(index) {
-    this.quotes[index].upvote++;
+    this.quotes[index].upvotes++;
   }
   dislikeQuote(index) {
     this.quotes[index].downvote++;
@@ -27,7 +27,7 @@ export class DiplayQuoteComponent implements OnInit {
     this.likes = 0;
     this.dislike = 0;
     for (this.counter = 0; this.counter < this.quotes.length; this.counter++) {
-      this.dislike = this.quotes[this.counter].upvote;
+      this.dislike = this.quotes[this.counter].upvotes;
       if (this.dislike > this.likes) {
         this.likes = this.dislike;
       }

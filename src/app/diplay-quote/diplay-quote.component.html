@@ -1,7 +1,9 @@
-<p appHighlight *ngIf="highestLike()===qu.upvote && qu.upvote>0">
-    {{qu.citation}}
-</p>
-<p *ngIf="highestLike()!==qu.upvote===0 || qu.upvote===0">{{qu.quote}}</p>
+<div *ngFor="let qu of quotes; let i=index">
+    <p appHighlight *ngIf="highestLike()===qu.upvotes && qu.upvotes>0">
+        {{qu.citation}}
+    </p>
+    <p *ngIf="highestLike()!==qu.upvotes===0 || qu.upvotes===0">{{qu.citation}}</p>
+</div>
 <p>{{qu.author}}
 </p>
 <p>{{qu.person}}</p>
