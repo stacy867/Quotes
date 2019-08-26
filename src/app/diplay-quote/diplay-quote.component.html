@@ -1,15 +1,15 @@
 <div *ngFor="let qu of quotes; let i=index">
-    <p appHighlight *ngIf="highestLike()===qu.upvotes && qu.upvotes>0">
+    <p>
         {{qu.citation}}
     </p>
-    <p *ngIf="highestLike()!==qu.upvotes===0 || qu.upvotes===0">{{qu.citation}}</p>
+    <!-- <p *ngIf="highestLike()!==qu.upvotes===0 || qu.upvotes===0">{{qu.citation}}</p> -->
 </div>
-<p>{{qu.author}}
+<p><strong>The author of this quote is:</strong>{{qu.author}}
 </p>
-<p>{{qu.person}}</p>
+<p><strong>Contributed by:</strong>{{qu.person}}</p>
 <p>This quote has{{likes}} upvotes</p>
 <p>This quote has {{dislike}} downvotes</p>
 <p>This quote was created before {{qu.completeDate|timeCount}} days</p>
 
-<button (click)=' likeQuote(i) '>LIKE</button>
-<button (click)='dislikeQuote(i) '>DISLIKE</button>
+<button (click)=' likeQuote() '>LIKE</button>
+<button (click)='dislikeQuote() '>DISLIKE</button>

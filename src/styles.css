@@ -8,19 +8,17 @@ body {
 } */
     
     @import "~bootstrap/dist/css/bootstrap.css";
-    textarea {
+    /* textarea {
         border: 1px solid;
         width: 40%;
         height: 70%;
-    }
+    }*/
     
     #display {
         border: 1px solid black;
         width: 100%;
     }
-    /*     
-    body {
-
-         background-size: cover;
-        background-repeat: no-repeat; 
-    } */
+    
+    .container {
+        align-items: center;
+    }
