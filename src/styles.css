@@ -18,10 +18,16 @@ body {
     #display {
         border: 1px solid black;
         width: 100%;
+        margin-left: 2%;
     }
     
-    .container {
-        align-items: center;
+    .jumbotron {
+        /* align-items: center;
+        margin-left: 10%; */
+        background-image: url("http://zone1-af2a.kxcdn.com/wp-content/uploads/writing-quotes-write-what-should-not-be-forgotten-isabel-allende-wisdom-quotes-1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50%;
     }
     
     strong {

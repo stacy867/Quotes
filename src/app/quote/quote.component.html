@@ -1,16 +1,17 @@
 <div class="container" id="quote">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
-        <div class="col-md-6" id="display">
-            <div *ngFor='let qu of quotes let i=index'>
-                <p><strong>Quote:</strong></p>
-                <p>{{qu.citation}}</p>
-                <p><strong>Quote Detail:</strong></p>
-                <app-diplay-quote [qu]='qu'></app-diplay-quote>
-                <button id="delete" (click)='deleteQuote($event,i)'>Delete Quote</button>
-            </div>
+    </div>
+
+    <div class="col-md-6" id="display">
+        <div *ngFor='let qu of quotes let i=index'>
+            <p><strong>Quote:</strong></p>
+            <p>{{qu.citation}}</p>
+            <p><strong>Quote Detail:</strong></p>
+            <app-diplay-quote [qu]='qu'></app-diplay-quote>
+            <button id="delete" (click)='deleteQuote($event,i)'>Delete Quote</button>
         </div>
     </div>
 </div>
