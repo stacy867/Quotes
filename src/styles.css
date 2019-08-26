@@ -8,6 +8,7 @@ body {
 } */
     
     @import "~bootstrap/dist/css/bootstrap.css";
+    @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
     /* textarea {
         border: 1px solid;
         width: 40%;
@@ -21,4 +22,21 @@ body {
     
     .container {
         align-items: center;
+    }
+    
+    strong {
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    #submit,
+    #delete {
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    h1 {
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    label {
+        font-family: 'Oswald', sans-serif;
     }
