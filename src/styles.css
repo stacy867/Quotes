@@ -29,7 +29,9 @@ body {
     }
     
     #submit,
-    #delete {
+    #delete,
+    #like,
+    #dislike {
         font-family: 'Oswald', sans-serif;
     }
     
