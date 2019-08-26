@@ -7,9 +7,10 @@
 <p><strong>The author of this quote is:</strong>{{qu.author}}
 </p>
 <p><strong>Contributed by:</strong>{{qu.person}}</p>
-<p>This quote has{{likes}} upvotes</p>
-<p>This quote has {{dislike}} downvotes</p>
-<p>This quote was created before {{qu.completeDate|timeCount}} days</p>
-
+<p><strong>This quote has:</strong>{{likes}} upvotes</p>
+<p><strong>This quote has:</strong>This quote has {{dislike}} downvotes</p>
+<p><strong>This quote was created before:</strong> {{qu.newDate|timeCount}} days
+</p>
+<p><strong>Posted on:</strong>{{qu.completeDate|date}}</p>
 <button (click)=' likeQuote() '>LIKE</button>
 <button (click)='dislikeQuote() '>DISLIKE</button>
